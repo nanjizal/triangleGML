@@ -1,0 +1,21 @@
+# HaxeLibs used from git
+
+# possible ones needed..
+#-lib pixelimage
+#-lib htmlHelper
+#-lib justPath
+#-lib vision
+#-lib format
+#-lib peote-view
+# dox flags to limit what is used
+-D triangleGML_Doc
+-D doc-gen
+# main package
+--macro include('triangleGML')
+-cp src
+# Main for Dox ussed
+-main triangleGML.Main_Doc
+--no-output
+-xml output.xml
+# limit to js initial then check hxcpp etc.. see geom for multi?
+-js foo

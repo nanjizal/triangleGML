@@ -1,0 +1,12 @@
+{
+    "name"         : "triangleGML",
+    "url"          : "https://github.com/nanjizal/triangleGML#triangleGML",
+    "license"      : "MIT",
+    "tags"         : ["cross", "image", "2d"],
+    "description"  : "TriangleGML markup language ( XML fascade for vector drawing )",
+    "version"      : "0.0.1-alpha",
+    "releasenote"  : "See https://github.com/nanjizal/triangleGML/blob/master/CHANGELOG.md",
+    "contributors" : ["Nanjizal"],
+    "classPath"    : "src",
+    "dependencies" : {}
+}
