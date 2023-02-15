@@ -1,7 +1,9 @@
 # triangleGML
+  
 XML Markup Language - Just Shape defined nodes.
 Initially Abstract Classes with Generic ```<DRAWTOOL,IMAGETOOL>``` provides XML attibute parsing without reflection or macros.
 Concept intitally for PixelimageXY, currently no implementation included.
+  
 Implementation of `render` potentially will be extended for `cornerContour`, and perhaps `fl' api's, svg, canvas.
   
 Only 3 abstract node shapes included so far, lots more to come.
