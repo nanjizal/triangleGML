@@ -21,3 +21,5 @@ More to be included from `pixelimage`.
 ```getTriangleGML( nodeName: String )```
   
 will be clearer when `pixelimageXY` has an implementation included.
+  
+  .
