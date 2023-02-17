@@ -855,10 +855,14 @@
 			<m n=":deprecated"/>
 		</meta>
 	</typedef>
-	<class path="Math" params="" file="/home/nanjizal/haxe/versions/779b005/std/js/_std/Math.hx" extern="1"><meta>
-	<m n=":keep"/>
-	<m n=":keepInit"/>
-</meta></class>
+	<class path="Math" params="" file="/home/nanjizal/haxe/versions/779b005/std/js/_std/Math.hx" extern="1">
+		<PI public="1" set="null" static="1"><x path="Float"/></PI>
+		<meta>
+			<m n=":keep"/>
+			<m n=":directlyUsed"/>
+			<m n=":keepInit"/>
+		</meta>
+	</class>
 	<class path="String" params="" file="/home/nanjizal/haxe/versions/779b005/std/js/_std/String.hx" extern="1">
 		<fromCharCode public="1" get="inline" set="null" line="43" static="1">
 			<f a="code">
@@ -3348,10 +3352,10 @@
 		</GAP>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="triangleGML.FillShape" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/FillShape.hx" abstract="1">
+	<class path="triangleGML.FillForm" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/FillForm.hx" abstract="1">
 		<extends path="triangleGML.BasicShape">
-			<c path="triangleGML.FillShape.DRAWTOOL"/>
-			<c path="triangleGML.FillShape.IMAGETOOL"/>
+			<c path="triangleGML.FillForm.DRAWTOOL"/>
+			<c path="triangleGML.FillForm.IMAGETOOL"/>
 		</extends>
 		<fill public="1"><x path="Int"/></fill>
 		<setParameter public="1" set="method" line="20" override="1"><f a="name:value">
@@ -3359,8 +3363,6 @@
 	<c path="String"/>
 	<x path="Void"/>
 </f></setParameter>
-		<fillshape abstract="1" set="method"><f a=""><x path="Void"/></f></fillshape>
-		<stokeshape abstract="1" set="method"><f a=""><x path="Void"/></f></stokeshape>
 		<new public="1" set="method" line="16">
 			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill" v="1.:true:0x000000:1.:null:0x000000">
 				<x path="Float"/>
@@ -3475,6 +3477,27 @@
 			</f>
 			<meta><m n=":value"><e>{ strokePatternScale : 1, strokePatternAcross : true, strokePatternHeight : null, strokePatternWidth : null, strokePatternFill : null, strokeColor1 : 0x00000000, strokeColor0 : 0x00000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x00000000, visibility : true, opacity : 1. }</e></m></meta>
 		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.RectangleWindow" params="" file="src/triangleGML/RectangleWindow.hx">
+		<minMax public="1" get="inline" set="null" line="17" static="1"><f a="x:y:maxX:maxY">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<c path="triangleGML.RectangleWindow"/>
+</f></minMax>
+		<x public="1"><x path="Float"/></x>
+		<y public="1"><x path="Float"/></y>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<new public="1" get="inline" set="null" line="10"><f a="x:y:width:height">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></new>
 		<meta><m n=":structInit"/></meta>
 	</class>
 	<class path="triangleGML.TriangleGML_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/TriangleGML.hx" module="triangleGML.TriangleGML" abstract="1">
@@ -4249,6 +4272,74 @@
 		</new>
 		<meta><m n=":structInit"/></meta>
 	</class>
+	<class path="triangleGML.shape.contour.CubicCurveShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/CubicCurveShape_.hx" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.CubicCurveShape_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.CubicCurveShape_.IMAGETOOL"/>
+		</extends>
+		<x1 public="1"><x path="Float"/></x1>
+		<y1 public="1"><x path="Float"/></y1>
+		<x2 public="1"><x path="Float"/></x2>
+		<y2 public="1"><x path="Float"/></y2>
+		<x3 public="1"><x path="Float"/></x3>
+		<y3 public="1"><x path="Float"/></y3>
+		<x4 public="1"><x path="Float"/></x4>
+		<y4 public="1"><x path="Float"/></y4>
+		<setParameter public="1" set="method" line="40" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="29">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?x1:?y1:?x2:?y2:?x3:?y3:?x4:?y4" v="1.:true:0x00000000:1.:null:0.:0.:0.:0.:0.:0.:0.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ y4 : 0., x4 : 0., y3 : 0., x3 : 0., y2 : 0., x2 : 0., y1 : 0., x1 : 0., strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x00000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.contour.EllipseShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/EllipseShape_.hx" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.EllipseShape_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.EllipseShape_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<setParameter public="1" set="method" line="24" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="17">
+			<f a="?opacity:?visibility:?strokeColor:?left:?top:?width:?height" v="1.:true:0x000000:0.:0.:1.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ height : 1., width : 1., top : 0., left : 0., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
 	<class path="triangleGML.shape.contour.LineGridShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/LineGridShape_.hx" abstract="1">
 		<extends path="triangleGML.BasicShape">
 			<c path="triangleGML.shape.contour.LineGridShape_.DRAWTOOL"/>
@@ -4312,6 +4403,737 @@
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ y2 : 0., x2 : 0., y1 : 0., x1 : 0., strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0xFFF00000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.contour.QuadCurveShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/QuadCurveShape_.hx" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.QuadCurveShape_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.QuadCurveShape_.IMAGETOOL"/>
+		</extends>
+		<x1 public="1"><x path="Float"/></x1>
+		<y1 public="1"><x path="Float"/></y1>
+		<x2 public="1"><x path="Float"/></x2>
+		<y2 public="1"><x path="Float"/></y2>
+		<x3 public="1"><x path="Float"/></x3>
+		<y3 public="1"><x path="Float"/></y3>
+		<thru public="1"><x path="Bool"/></thru>
+		<setParameter public="1" set="method" line="37" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="27">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?thru:?x1:?y1:?x2:?y2:?x3:?y3" v="1.:true:0x000000:1.:null:false:0.:0.:0.:0.:0.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ y3 : 0., x3 : 0., y2 : 0., x2 : 0., y1 : 0., x1 : 0., thru : false, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.contour.QuadShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/QuadShape_.hx" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.QuadShape_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.QuadShape_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<dX public="1"><x path="Float"/></dX>
+		<dY public="1"><x path="Float"/></dY>
+		<setParameter public="1" set="method" line="37" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="26">
+			<f a="?opacity:?visibility:?strokeColor:?aX:?aY:?bX:?bY:?cX:?cY:?dX:?dY" v="1.:true:0xFFF00000:0.:0.:1.:0.:1.:1.:0.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ dY : 1., dX : 0., cY : 1., cX : 1., bY : 0., bX : 1., aY : 0., aX : 0., strokeColor : 0xFFF00000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.contour.QuintShape_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/QuintShape_.hx" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.QuintShape_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.QuintShape_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<dX public="1"><x path="Float"/></dX>
+		<dY public="1"><x path="Float"/></dY>
+		<softC public="1"><x path="Float"/></softC>
+		<setParameter public="1" set="method" line="40" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="28">
+			<f a="?opacity:?visibility:?strokeColor:?aX:?aY:?bX:?bY:?cX:?cY:?dX:?dY:?softC" v="1.:true:0xFFF00000:0.:0.:1.:0.:1.:1.:0.:1.:10.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ softC : 10., dY : 1., dX : 0., cY : 1., cX : 1., bY : 0., bX : 1., aY : 0., aX : 0., strokeColor : 0xFFF00000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.contour.Triangle_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/contour/TriangleShape_.hx" module="triangleGML.shape.contour.TriangleShape_" abstract="1">
+		<extends path="triangleGML.BasicShape">
+			<c path="triangleGML.shape.contour.Triangle_.DRAWTOOL"/>
+			<c path="triangleGML.shape.contour.Triangle_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<setParameter public="1" set="method" line="33" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="23">
+			<f a="?opacity:?visibility:?strokeColor:?aX:?aY:?bX:?bY:?cX:?cY" v="1.:true:0xFFF00000:0.:0.:1.:0.:1.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ cY : 1., cX : 1., bY : 0., bX : 1., aY : 0., aX : 0., strokeColor : 0xFFF00000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.CircleForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/CircleForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.CircleForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.CircleForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<diameter public="1"><x path="Float"/></diameter>
+		<setParameter public="1" set="method" line="26" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="20">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?diameter" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ diameter : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.EllipseForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/EllipseForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.EllipseForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.EllipseForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<setParameter public="1" set="method" line="29" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="22">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?width:?height" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ height : 1., width : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.PolygonForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/PolygonForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.PolygonForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.PolygonForm_.IMAGETOOL"/>
+		</extends>
+		<points public="1"><x path="Null"><c path="Array"><x path="Float"/></c></x></points>
+		<rotation public="1"><x path="Float"/></rotation>
+		<setParameter public="1" set="method" line="23" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="18">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?points:?rotation" v="1.:true:0x000000:1.:null:0x000000:null:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rotation : 0., points : null, fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.QuadForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/QuadForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.QuadForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.QuadForm_.IMAGETOOL"/>
+		</extends>
+		<x1 public="1"><x path="Float"/></x1>
+		<y1 public="1"><x path="Float"/></y1>
+		<x2 public="1"><x path="Float"/></x2>
+		<y2 public="1"><x path="Float"/></y2>
+		<x3 public="1"><x path="Float"/></x3>
+		<y3 public="1"><x path="Float"/></y3>
+		<x4 public="1"><x path="Float"/></x4>
+		<y4 public="1"><x path="Float"/></y4>
+		<setParameter public="1" set="method" line="41" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="30">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?x1:?y1:?x2:?y2:?x3:?y3:?x4:?y4" v="1.:true:0x000000:1.:null:0x000000:0.:0.:0.:0.:0.:0.:0.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ y4 : 0., x4 : 0., y3 : 0., x3 : 0., y2 : 0., x2 : 0., y1 : 0., x1 : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.RectangleForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/RectangleForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.RectangleForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.RectangleForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<rounded public="1"><x path="Bool"/></rounded>
+		<setParameter public="1" set="method" line="32" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="24">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?width:?height:?rounded" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:1.:false">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rounded : false, height : 1., width : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.RegularPolygonForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/RegularPolyonForm_.hx" module="triangleGML.shape.form.RegularPolyonForm_" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.RegularPolygonForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.RegularPolygonForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<diameter public="1"><x path="Float"/></diameter>
+		<rotation public="1"><x path="Float"/></rotation>
+		<sides public="1"><x path="Float"/></sides>
+		<innerRadius public="1"><x path="Null"><x path="Float"/></x></innerRadius>
+		<setParameter public="1" set="method" line="37" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="29">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?diameter:?rotation:?sides:?innerRadius" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:0.:6:null">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<d/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ innerRadius : null, sides : 6, rotation : 0., diameter : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.SquareForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/SquareForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.SquareForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.SquareForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<diameter public="1"><x path="Float"/></diameter>
+		<rounded public="1"><x path="Bool"/></rounded>
+		<setParameter public="1" set="method" line="31" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="24">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?diameter:?rounded" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:false">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rounded : false, diameter : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.StarForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/StarForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.StarForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.StarForm_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<diameter public="1"><x path="Float"/></diameter>
+		<rotation public="1"><x path="Float"/></rotation>
+		<sides public="1"><x path="Float"/></sides>
+		<innerRadius public="1"><x path="Null"><x path="Float"/></x></innerRadius>
+		<setParameter public="1" set="method" line="38" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="29">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?diameter:?rotation:?sides:?innerRadius" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:0.:6:null">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ innerRadius : null, sides : 6, rotation : 0., diameter : 1., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.form.TriangleForm_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/form/TriangleForm_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.form.TriangleForm_.DRAWTOOL"/>
+			<c path="triangleGML.shape.form.TriangleForm_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<setParameter public="1" set="method" line="36" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="27">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?aX:?aY:?bX:?bY:?cX:?cY" v="1.:true:0x000000:1.:null:0x000000:0.:0.:1.:0.:1.:1.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ cY : 1., cX : 1., bY : 0., bX : 1., aY : 0., aX : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.ArrowThickGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/ArrowThickGradient_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.gradient.ArrowThickGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.ArrowThickGradient_.IMAGETOOL"/>
+		</extends>
+		<x1 public="1"><x path="Float"/></x1>
+		<y1 public="1"><x path="Float"/></y1>
+		<x2 public="1"><x path="Float"/></x2>
+		<y2 public="1"><x path="Float"/></y2>
+		<both public="1"><x path="Bool"/></both>
+		<flare public="1"><x path="Bool"/></flare>
+		<reverseFlare public="1"><x path="Bool"/></reverseFlare>
+		<arrowWidth public="1"><x path="Float"/></arrowWidth>
+		<arrowHeight public="1"><x path="Float"/></arrowHeight>
+		<strokeTopColor public="1"><x path="Int"/></strokeTopColor>
+		<strokeBottomColor public="1"><x path="Int"/></strokeBottomColor>
+		<setParameter public="1" set="method" line="48" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="34">
+			<f a="?opacity:?visibility:?strokeTopColor:?strokeBottomColor:?strokeWidth:?strokeDashGapArray:?both:?flare:?reverseFlare:?x1:?y1:?x2:?y2:?arrowWidth:?arrowHeight" v="1.:true:0xFF000000:0xFFFFFFFF:1.:null:false:false:false:0.:0.:0.:0.:0.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ arrowHeight : 0., arrowWidth : 0., y2 : 0., x2 : 0., y1 : 0., x1 : 0., reverseFlare : false, flare : false, both : false, strokeDashGapArray : null, strokeWidth : 1., strokeBottomColor : 0xFFFFFFFF, strokeTopColor : 0xFF000000, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.EllipseRadialGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/EllipseRadialGradient_.hx" abstract="1">
+		<extends path="triangleGML.BasicGradient">
+			<c path="triangleGML.shape.gradient.EllipseRadialGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.EllipseRadialGradient_.IMAGETOOL"/>
+		</extends>
+		<centreX public="1"><x path="Float"/></centreX>
+		<centreY public="1"><x path="Float"/></centreY>
+		<radiusX public="1"><x path="Float"/></radiusX>
+		<radiusY public="1"><x path="Float"/></radiusY>
+		<colorIn public="1"><x path="Int"/></colorIn>
+		<colorOut public="1"><x path="Int"/></colorOut>
+		<gradientCentreX public="1"><x path="Float"/></gradientCentreX>
+		<gradientCentreY public="1"><x path="Float"/></gradientCentreY>
+		<rotation public="1"><x path="Float"/></rotation>
+		<setParameter public="1" set="method" line="37" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="27">
+			<f a="?opacity:?visibility:?centreX:?centreY:?radiusX:?radiusY:?colorIn:?colorOut:?gradientCentreX:?gradientCentreY:?rotation" v="1.:true:30:30:10:10:0xFFFFFF00:0xFF0000FF:-1.:-1.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rotation : 0., gradientCentreY : -1., gradientCentreX : -1., colorOut : 0xFF0000FF, colorIn : 0xFFFFFF00, radiusY : 10, radiusX : 10, centreY : 30, centreX : 30, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.PolygonRadialGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/PolygonRadialGradient_.hx" abstract="1">
+		<extends path="triangleGML.BasicGradient">
+			<c path="triangleGML.shape.gradient.PolygonRadialGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.PolygonRadialGradient_.IMAGETOOL"/>
+		</extends>
+		<points public="1"><x path="Null"><c path="Array"><x path="Float"/></c></x></points>
+		<colorIn public="1"><x path="Int"/></colorIn>
+		<colorOut public="1"><x path="Int"/></colorOut>
+		<gradientCentreX public="1"><x path="Float"/></gradientCentreX>
+		<gradientCentreY public="1"><x path="Float"/></gradientCentreY>
+		<rotation public="1"><x path="Float"/></rotation>
+		<setParameter public="1" set="method" line="27" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="20">
+			<f a="?opacity:?visibility:?points:?colorIn:?colorOut:?gradientCentreX:?gradientCentreY:?rotation" v="1.:true:null:0xFFFFFF00:0xFF0000FF:-1.:-1.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rotation : 0., gradientCentreY : -1., gradientCentreX : -1., colorOut : 0xFF0000FF, colorIn : 0xFFFFFF00, points : null, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.QuadGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/QuadGradient_.hx" abstract="1">
+		<extends path="triangleGML.BasicGradient">
+			<c path="triangleGML.shape.gradient.QuadGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.QuadGradient_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<dX public="1"><x path="Float"/></dX>
+		<dY public="1"><x path="Float"/></dY>
+		<colorA public="1"><x path="Int"/></colorA>
+		<colorB public="1"><x path="Float"/></colorB>
+		<colorC public="1"><x path="Float"/></colorC>
+		<colorD public="1"><x path="Float"/></colorD>
+		<setParameter public="1" set="method" line="44" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="33">
+			<f a="?opacity:?visibility:?aX:?aY:?bX:?bY:?cX:?cY:?dX:?dY:?colorA:?colorB:?colorC:?colorD" v="1.:true:0.:0.:1.:0.:1.:1.:0.:1.:0xffd9ff00:0xFFFF00FB:0xFF00FFBF:0xFFFF9500">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ colorD : 0xFFFF9500, colorC : 0xFF00FFBF, colorB : 0xFFFF00FB, colorA : 0xffd9ff00, dY : 1., dX : 0., cY : 1., cX : 1., bY : 0., bX : 1., aY : 0., aX : 0., visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.RectangleRadialGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/RectangleRadialGradient_.hx" abstract="1">
+		<extends path="triangleGML.BasicGradient">
+			<c path="triangleGML.shape.gradient.RectangleRadialGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.RectangleRadialGradient_.IMAGETOOL"/>
+		</extends>
+		<centreX public="1"><x path="Float"/></centreX>
+		<centreY public="1"><x path="Float"/></centreY>
+		<radiusX public="1"><x path="Float"/></radiusX>
+		<radiusY public="1"><x path="Float"/></radiusY>
+		<colorIn public="1"><x path="Int"/></colorIn>
+		<colorOut public="1"><x path="Int"/></colorOut>
+		<gradientCentreX public="1"><x path="Float"/></gradientCentreX>
+		<gradientCentreY public="1"><x path="Float"/></gradientCentreY>
+		<rotation public="1"><x path="Float"/></rotation>
+		<setParameter public="1" set="method" line="36" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="26">
+			<f a="?opacity:?visibility:?centreX:?centreY:?radiusX:?radiusY:?colorIn:?colorOut:?gradientCentreX:?gradientCentreY:?rotation" v="1.:true:30:30:10:10:0xFFFFFF00:0xFF0000FF:-1.:-1.:0.">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rotation : 0., gradientCentreY : -1., gradientCentreX : -1., colorOut : 0xFF0000FF, colorIn : 0xFFFFFF00, radiusY : 10, radiusX : 10, centreY : 30, centreX : 30, visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.gradient.TriangleGradient_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/gradient/TriangleGradient_.hx" abstract="1">
+		<extends path="triangleGML.BasicGradient">
+			<c path="triangleGML.shape.gradient.TriangleGradient_.DRAWTOOL"/>
+			<c path="triangleGML.shape.gradient.TriangleGradient_.IMAGETOOL"/>
+		</extends>
+		<aX public="1"><x path="Float"/></aX>
+		<aY public="1"><x path="Float"/></aY>
+		<bX public="1"><x path="Float"/></bX>
+		<bY public="1"><x path="Float"/></bY>
+		<cX public="1"><x path="Float"/></cX>
+		<cY public="1"><x path="Float"/></cY>
+		<setParameter public="1" set="method" line="32" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="23">
+			<f a="?opacity:?visibility:?aX:?aY:?bX:?bY:?cX:?cY:?colorA:?colorB:?colorC" v="1.:true:0.:0.:1.:0.:0.:1.:0xFFFF0000:0xFF00FF00:0xFF0000FF">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ colorC : 0xFF0000FF, colorB : 0xFF00FF00, colorA : 0xFFFF0000, cY : 1., cX : 0., bY : 0., bX : 1., aY : 0., aX : 0., visibility : true, opacity : 1. }</e></m></meta>
+		</new>
+		<meta><m n=":structInit"/></meta>
+	</class>
+	<class path="triangleGML.shape.picture.RectanglePicture_" params="DRAWTOOL:IMAGETOOL" file="src/triangleGML/shape/picture/RectanglePicture_.hx" abstract="1">
+		<extends path="triangleGML.FillForm">
+			<c path="triangleGML.shape.picture.RectanglePicture_.DRAWTOOL"/>
+			<c path="triangleGML.shape.picture.RectanglePicture_.IMAGETOOL"/>
+		</extends>
+		<left public="1"><x path="Float"/></left>
+		<top public="1"><x path="Float"/></top>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<image public="1"><x path="Null"><c path="triangleGML.shape.picture.RectanglePicture_.IMAGETOOL"/></x></image>
+		<pictureX public="1"><x path="Float"/></pictureX>
+		<pictureY public="1"><x path="Float"/></pictureY>
+		<pictureWidth public="1"><x path="Float"/></pictureWidth>
+		<pictureHeight public="1"><x path="Float"/></pictureHeight>
+		<rounded public="1"><x path="Bool"/></rounded>
+		<setParameter public="1" set="method" line="48" override="1"><f a="name:value">
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></setParameter>
+		<new public="1" set="method" line="35">
+			<f a="?opacity:?visibility:?strokeColor:?strokeWidth:?strokeDashGapArray:?fill:?left:?top:?width:?height:?image:?pictureX:?pictureY:?pictureWidth:?pictureHeight:?rounded" v="1.:true:0x000000:1.:null:0x000000:0.:0.:100.:100.:null:0.:0.:100.:100.:false">
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<c path="Array"><x path="triangleGML.DashGap"/></c>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="triangleGML.shape.picture.RectanglePicture_.IMAGETOOL"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ rounded : false, pictureHeight : 100., pictureWidth : 100., pictureY : 0., pictureX : 0., image : null, height : 100., width : 100., top : 0., left : 0., fill : 0x000000, strokeDashGapArray : null, strokeWidth : 1., strokeColor : 0x000000, visibility : true, opacity : 1. }</e></m></meta>
 		</new>
 		<meta><m n=":structInit"/></meta>
 	</class>

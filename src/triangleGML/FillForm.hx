@@ -3,7 +3,7 @@ package triangleGML;
 import triangleGML.BasicShape;
 
 @:structInit
-abstract class FillShape<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETOOL> {
+abstract class FillForm<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETOOL> {
     public var fill: Int;
     public function new(  opacity            = 1.
                         , visibility          = true
@@ -25,6 +25,9 @@ abstract class FillShape<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETO
                 super.setParameter( name, value );
         }
     }
+    /*
+    TODO: Consider..
     abstract function fillshape():Void;
     abstract function stokeshape():Void;
+    */
 }
