@@ -23,3 +23,6 @@ More to be included from `pixelimage`.
 will be clearer when `pixelimageXY` has an implementation included.
   
   .
+
+
+  
