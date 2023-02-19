@@ -21,8 +21,8 @@ abstract class PatternShape<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAG
     public var fillPatternScale:    Int;
 
     public var tiledBorder:         Bool;
-    public var tileImageStroke:     IMAGETOOL;
-    public var tileImageFill:       IMAGETOOL;
+    public var imageTileStroke:     IMAGETOOL;
+    public var imageTileFill:       IMAGETOOL;
     public function new(  opacity            = 1.
                         , visibility          = true
                         , strokeColor        = 0x00000000

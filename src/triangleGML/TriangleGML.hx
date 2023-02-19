@@ -65,39 +65,56 @@ enum abstract TriangleGMLname ( String ) to String {
     /* contour */
     var ARROW_SHAPE                 = 'ArrowShape';
 	var CUBIC_CURVE_SHAPE           = 'CubicCurveShape';
+    var ELLIPSE_SHAPE               = 'EllipseShape';
     var LINE_GRID_SHAPE             = 'LineGridShape';
     var LINE_SHAPE                  = 'LineShape';
     var POLY_LINE_SHAPE             = 'PolyLineShape';
     var QUAD_CURVE_SHAPE            = 'QuadCurveShape';
     var QUAD_SHAPE                  = 'QuadShape';
-    var QUAD_SOFT_SHAPE             = 'QuadSoftShape';
     var QUINT_SHAPE                 = 'QuintShape';
-    var SOFT_ELLIPSE_SHAPE          = 'SoftEllipseShape';
-    var THRU_CURVE_SHAPE            = 'ThruCurveShape';
-    var TRIANGLE_SOFT_SHAPE         = 'TriangleSoftShape';
+    var TRIANGLE_SHAPE              = 'TriangleShape';
+    /* shape form */
+    var ARC_FORM                    = 'ArcForm';
+    var CIRCLE_FORM                 = 'CircleForm';
+    var ELLIPSE_FORM                = 'EllipseForm';
+    var PATH_ELEMENT_FORM           = 'PathElementForm';
+    var QUAD_FORM                   = 'QuadForm';
+    var RECTANGLE_FORM              = 'RectangleForm';
+    var SQUARE_FORM                 = 'SquareForm';
+    var TRIANGLE_FORM               = 'TriangleForm';
+    var VE_PATH_ELEMENT_FORM        = 'VePathElementForm';
     /* gradient */
     var ARROW_THICK_GRADIENT        = 'ArrowThickGradient';
     var ELLIPSE_RADIAL_GRADIENT     = 'EllipseRadialGradient';
-    var PATH_ELEMENT_THICK_GRADIENT = 'PathElementThickGradient';
-    var QUAD_GRADIENT               = 'QuadGradient';
-    var TRIANGLE_GRADIENT           = 'TriangleGradient';
-    /* gradientContour */
     var LINE_GRADIENT               = 'LineGradient';
+    var PATH_ELEMENT_THICK_GRADIENT = 'PathElementThickGradient';
     var POLY_LINE_GRADIENT          = 'PolyLineGradient';
-    /* patternContour */  
-    var CUBIC_CURVE_PATTERN         = 'CubicCurvePattern';
-    var LINE_PATTERN                = 'LinePattern';
-    var QUAD_PATTERN                = 'QuadPattern';
-    var TRIANGLE_PATTERN            = 'TrianglePattern';
-    // patternShape
+    var QUAD_GRADIENT               = 'QuadGradient';
+    var RECTANGLE_RADIAL_GRADIENT   = 'RectangleRadialGradient';
+    var TRIANGLE_GRADIENT           = 'TriangleGradient';
+    /* pattern */  
     var ARC_PATTERN                 = 'ArcPattern';
     var CIRCLE_PATTERN              = 'CirclePattern';
     var ELLIPSE_PATTERN             = 'EllipsePattern';
+    var LINE_PATTERN                = 'LinePattern';
     var PATH_ELEMENT_PATTERN        = 'PathElementPattern';
+    var QUAD_PATTERN                = 'QuadPattern';
+    var SQUARE_PATTERN              = 'SquarePattern';
+    var RECTANGLE_PATTERN           = 'RectanglePattern';
+    
+    var CUBIC_CURVE_PATTERN         = 'CubicCurvePattern';
+    
+    
+    var TRIANGLE_PATTERN            = 'TrianglePattern';
+    // patternShape
+    
+    
+    
+    
     var PATH_SOFT_ELEMENT_PATTERN   = 'PathSoftElementPattern';
     var QUADRILATERAL_PATTERN       = 'QuadrilateralPattern';
-    var RECTANGLE_PATTERN           = 'RectanglePattern';
-    var SQUARE_PATTERN              = 'SquarePattern';
+    
+    
     // shape
     var ARC_SHAPE                   = 'ArcShape';
     var CIRCLE_SHAPE                = 'CircleShape';
