@@ -8,7 +8,6 @@ abstract class RegularPolygonForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL
     public var width:   Float;
     public var height:  Float;
     public var diameter: Float;
-    public var rotation: Float;
     public var sides:    Float;
     public var innerRadius: Null<Float>;
 
@@ -23,7 +22,6 @@ abstract class RegularPolygonForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL
                         , left = 0.
                         , top = 0.
                         , diameter = 1.
-                        , rotation = 0.
                         , sides = 6
                         , innerRadius = null
                         ){
@@ -31,7 +29,6 @@ abstract class RegularPolygonForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL
         this.left      = left;
         this.top       = top;
         this.diameter  = diameter;
-        this.rotation  = rotation;
         this.sides     = sides;
     }
     public override function setParameter( name: String, value: String ){
@@ -42,9 +39,6 @@ abstract class RegularPolygonForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL
                 top = Std.parseFloat( value );
             case 'diameter':
                 diameter = Std.parseFloat( value );
-            case 'rotation':
-                var degree = Std.parseFloat( value );
-                rotation = ( degree == 0 )?0: Math.PI*degree/180;
             case 'sides':
                 sides = Std.parseInt( value );
             case _:

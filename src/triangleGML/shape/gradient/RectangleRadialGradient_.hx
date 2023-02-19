@@ -11,7 +11,6 @@ abstract class RectangleRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradien
     public var colorOut: Int;
     public var gradientCentreX: Float;
     public var gradientCentreY: Float;
-    public var rotation: Float;
     public function new(  opacity            = 1.
                         , visibility          = true
                         , centreX = 30
@@ -22,7 +21,6 @@ abstract class RectangleRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradien
                         , colorOut = 0xFF0000FF
                         , gradientCentreX = -1.
                         , gradientCentreY = -1.
-                        , rotation = 0.
                         ){
         super( opacity, visibility, [ colorIn, colorOut ] );
         this.centreX = centreX;
@@ -31,7 +29,6 @@ abstract class RectangleRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradien
         this.radiusY = radiusY;
         this.gradientCentreY = gradientCentreX;
         this.gradientCentreY = gradientCentreY;
-        this.rotation = rotation;
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){
@@ -47,8 +44,6 @@ abstract class RectangleRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradien
                 gradientCentreX = Std.parseFloat( value );
             case 'gradientCentreY':
                 gradientCentreY = Std.parseFloat( value );
-            case 'rotation':
-                rotation = Std.parseFloat( value );
             case 'colorIn':
                 cornerColors[0] = Std.parseInt( value );
             case 'colorOut':

@@ -9,7 +9,6 @@ abstract class Triangle_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETO
     public var bY:      Float;
     public var cX:      Float;
     public var cY:      Float;
-    
     public function new(  opacity            = 1.
                         , visibility          = true
                         , strokeColor        = 0xFFF00000
@@ -28,7 +27,6 @@ abstract class Triangle_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETO
         this.bY = bY;
         this.cX = cX;
         this.cY = cY;
-
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){
@@ -43,7 +41,7 @@ abstract class Triangle_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETO
             case 'cX':
                 cX = Std.parseFloat( value );
             case 'cY':
-                cY = Std.parseFloat( value );                          
+                cY = Std.parseFloat( value );                         
             case _:
                 super.setParameter( name, value );
         }

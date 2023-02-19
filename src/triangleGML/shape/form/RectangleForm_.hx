@@ -27,7 +27,7 @@ abstract class RectangleForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAG
         this.top    = top;
         this.width  = width;
         this.height = height;
-        this.rounded = rounded; 
+        this.rounded = rounded;
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){

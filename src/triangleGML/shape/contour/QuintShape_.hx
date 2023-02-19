@@ -11,7 +11,6 @@ abstract class QuintShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGE
     public var cY:      Float;
     public var dX:      Float;
     public var dY:      Float;
-    public var softC:   Float;
     public function new(  opacity            = 1.
                         , visibility          = true
                         , strokeColor        = 0xFFF00000
@@ -24,7 +23,6 @@ abstract class QuintShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGE
                         , cY: Float = 1.
                         , dX: Float = 0.
                         , dY: Float = 1.
-                        , softC: Float = 10.
                         ){
         super( opacity, visibility, strokeColor, 0., null );
         this.aX = aX;
@@ -35,7 +33,6 @@ abstract class QuintShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGE
         this.cY = cY;
         this.dX = dX;
         this.dY = dY;
-        this.softC = softC;
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){
@@ -54,9 +51,7 @@ abstract class QuintShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGE
             case 'dX':
                 dX = Std.parseFloat( value );
             case 'dY':
-                dY = Std.parseFloat( value );   
-            case 'softC':
-                softC = Std.parseFloat( value );             
+                dY = Std.parseFloat( value );               
             case _:
                 super.setParameter( name, value );
         }

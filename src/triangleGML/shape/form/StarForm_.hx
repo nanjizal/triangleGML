@@ -8,7 +8,6 @@ abstract class StarForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL
     public var width:   Float;
     public var height:  Float;
     public var diameter: Float;
-    public var rotation: Float;
     public var sides:    Float;
     public var innerRadius: Null<Float>;
 
@@ -23,7 +22,6 @@ abstract class StarForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL
                         , left = 0.
                         , top = 0.
                         , diameter = 1.
-                        , rotation = 0.
                         , sides = 6
                         , innerRadius = null
                         ){
@@ -31,7 +29,6 @@ abstract class StarForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL
         this.left      = left;
         this.top       = top;
         this.diameter  = diameter;
-        this.rotation  = rotation;
         this.sides     = sides; // defaults to 6 as this can be created with just two triangles so fairly optimal
         this.innerRadius = innerRadius; // if null assumes the star is like overlapping triangle, consider odd..
     }
@@ -43,9 +40,6 @@ abstract class StarForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL
                 top = Std.parseFloat( value );
             case 'diameter':
                 diameter = Std.parseFloat( value );
-            case 'rotation':
-                var degree = Std.parseFloat( value );
-                rotation = ( degree == 0 )?0: Math.PI*degree/180;
             case 'sides':
                 sides = Std.parseInt( value );
             case 'innerRadius':

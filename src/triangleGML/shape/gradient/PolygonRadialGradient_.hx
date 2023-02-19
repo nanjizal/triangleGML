@@ -8,21 +8,19 @@ abstract class PolygonRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradient<
     public var colorOut: Int;
     public var gradientCentreX: Float;
     public var gradientCentreY: Float;
-    public var rotation: Float;
+    public var gradientRotation: Float;
     public function new(  opacity            = 1.
                         , visibility          = true
                         , points  = null
                         , colorIn = 0xFFFFFF00
                         , colorOut = 0xFF0000FF
-                        , gradientCentreX = -1.
-                        , gradientCentreY = -1.
-                        , rotation = 0.
+                        , gradientCentreX = 0.
+                        , gradientCentreY = 0.
                         ){
         super( opacity, visibility, [ colorIn, colorOut ] );
         this.points = points;
         this.gradientCentreY = gradientCentreX;
         this.gradientCentreY = gradientCentreY;
-        this.rotation = rotation;
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){
@@ -33,8 +31,6 @@ abstract class PolygonRadialGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradient<
                 gradientCentreX = Std.parseFloat( value );
             case 'gradientCentreY':
                 gradientCentreY = Std.parseFloat( value );
-            case 'rotation':
-                rotation = Std.parseFloat( value );
             case 'colorIn':
                 cornerColors[0] = Std.parseInt( value );
             case 'colorOut':

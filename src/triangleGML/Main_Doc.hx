@@ -6,6 +6,7 @@ import triangleGML.shape.contour.*;
 class Main_Doc {
     public static function main(){
         
+        
     }
     public function new(){
         

@@ -13,7 +13,7 @@ abstract class PatternStroke<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMA
     public var strokePatternHeight: Int;
     public var strokePatternAcross: Bool;
     public var strokePatternScale:  Int;
-    public var tileImageStroke:     IMAGETOOL;
+    public var imageTileStroke:     IMAGETOOL;
 
     public function new(  opacity            = 1.
                         , visibility          = true

@@ -1,6 +1,7 @@
 package triangleGML.shape.contour;
 import triangleGML.BasicShape;
 
+// TODO: add option for OpenArrow
 @:structInit
 abstract class ArrowShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGETOOL> {
     public var x1: Float;
@@ -12,7 +13,6 @@ abstract class ArrowShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGE
     public var reverseFlare: Bool;
     public var arrowWidth: Float;
     public var arrowHeight: Float;
-    public var soft: Float;
     public function new(  opacity            = 1.
                         , visibility          = true
                         , strokeColor        = 0xFFF00000

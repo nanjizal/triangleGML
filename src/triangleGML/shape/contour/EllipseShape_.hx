@@ -30,7 +30,7 @@ abstract class EllipseShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMA
             case 'width':
                 width = Std.parseFloat( value );
             case 'height':
-                height = Std.parseFloat( value );
+                height = Std.parseFloat( value );  
             case _:
                 super.setParameter( name, value );
         }

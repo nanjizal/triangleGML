@@ -18,12 +18,14 @@ abstract class LineShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGET
                         , y1 = 0.
                         , x2 = 0.
                         , y2 = 0.
+                        , edgeSoft = 0.
                         ){
         super( opacity, visibility, strokeColor, strokeWidth, strokeDashGapArray );
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+        this.edgeSoft = edgeSoft;
     }
     public override function setParameter( name: String, value: String ){
         switch( name ){
@@ -34,7 +36,7 @@ abstract class LineShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGET
             case 'x2':
                 x2 = Std.parseFloat( value );
             case 'y2':
-                y2 = Std.parseFloat( value );          
+                y2 = Std.parseFloat( value );         
             case _:
                 super.setParameter( name, value );
         }

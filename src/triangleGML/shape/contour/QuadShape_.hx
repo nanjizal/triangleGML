@@ -14,7 +14,6 @@ abstract class QuadShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGET
     public function new(  opacity            = 1.
                         , visibility          = true
                         , strokeColor        = 0xFFF00000
-
                         , aX: Float = 0.
                         , aY: Float = 0.
                         , bX: Float = 1.
@@ -51,7 +50,7 @@ abstract class QuadShape_<DRAWTOOL,IMAGETOOL> extends BasicShape<DRAWTOOL,IMAGET
             case 'dX':
                 dX = Std.parseFloat( value );
             case 'dY':
-                dY = Std.parseFloat( value );         
+                dY = Std.parseFloat( value );  
             case _:
                 super.setParameter( name, value );
         }
