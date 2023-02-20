@@ -17,12 +17,14 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
         return imageTool;
     }
 
-    public function new( drawTool: DRAWTOOL, xml: Xml, x: Float = 0., y: Float = 0. ){
+    public function new( drawTool: DRAWTOOL, xml: Null<Xml> = null, x: Float = 0., y: Float = 0. ){
         this.drawTool = drawTool;
-        this.xml = xml;
-        this.offX = x;
-        this.offY = y;
-        process();
+        if( xml != null ){
+            this.xml = xml;
+            this.offX = x;
+            this.offY = y;
+            process();
+        }
     }
     public function addShape( str: String, x: Float = 0., y: Float = 0. ): TriangleGML_<DRAWTOOL,IMAGETOOL> {
         xml = Xml.parse( '<node>'+str+'</node>' ).firstElement(); 
