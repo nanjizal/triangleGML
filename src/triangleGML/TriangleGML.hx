@@ -60,7 +60,6 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
     abstract public function getTriangleGML( nodeName: String ): ShapeInterface<DRAWTOOL,IMAGETOOL>;
 }
 
-// Reconsider...
 enum abstract TriangleGMLname ( String ) to String {
     /* contour */
     var ARROW_SHAPE                 = 'ArrowShape';
@@ -99,31 +98,10 @@ enum abstract TriangleGMLname ( String ) to String {
     var LINE_PATTERN                = 'LinePattern';
     var PATH_ELEMENT_PATTERN        = 'PathElementPattern';
     var QUAD_PATTERN                = 'QuadPattern';
-    var SQUARE_PATTERN              = 'SquarePattern';
     var RECTANGLE_PATTERN           = 'RectanglePattern';
-    
-    var CUBIC_CURVE_PATTERN         = 'CubicCurvePattern';
-    
-    
-    var TRIANGLE_PATTERN            = 'TrianglePattern';
-    // patternShape
-    
-    
-    
-    
-    var PATH_SOFT_ELEMENT_PATTERN   = 'PathSoftElementPattern';
-    var QUADRILATERAL_PATTERN       = 'QuadrilateralPattern';
-    
-    
-    // shape
-    var ARC_SHAPE                   = 'ArcShape';
-    var CIRCLE_SHAPE                = 'CircleShape';
-    var ELLIPSE_SHAPE               = 'EllipseShape';
-    var PATH_ELEMENT_SHAPE          = 'PathElementShape';
-    var QUADRILATERAL_SHAPE         = 'QuadrilateralShape';
-    var RECTANGLE_SHAPE             = 'RectangleShape';
-    var SQUARE_SHAPE                = 'SquareShape';
-    var STAR6_SHAPE                 = 'Star6Shape';
-    var TRIANGLE_SHAPE              = 'TriangleShape';
-    var VE_PATH_ELEMENT_SHAPE       = 'VePathElementShape';
+    var SQUARE_PATTERN              = 'SquarePattern';
+    var TRIANGLE_PATTERN            = 'TrianglePattern';   
+    /* picture */
+    var NINE_SLICE_PICTURE          = 'NineSlicePicture';
+    var RECTANGLE_PICTURE           = 'RectanglePicture';
 }
