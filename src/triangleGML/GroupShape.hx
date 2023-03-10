@@ -15,10 +15,12 @@ abstract class GroupShape<DRAWTOOL,IMAGETOOL> implements ShapeInterface<DRAWTOOL
     public var edgeSoft:    Float = 0;
     public var externalSoft: Bool = false;
     public var rotation:    Float = 0.;
-    public var rotationCentreX:     Float = 0.;
-    public var rotationCentreY:     Float = 0.;
+    public var transformCentreX:     Float = 0.;
+    public var transformCentreY:     Float = 0.;
     public var skewX:       Float = 0.;
     public var skewY:       Float = 0.;
+    public var scaleX:      Float = 1.;
+    public var scaleY:      Float = 1.;
     public function new( opacity = 1., visibility = true ){
         this.visibility = visibility;
         this.opacity = opacity;
@@ -34,14 +36,20 @@ abstract class GroupShape<DRAWTOOL,IMAGETOOL> implements ShapeInterface<DRAWTOOL
                 rotation = ( degree == 0 )?0: Math.PI*degree/180;
             case 'theta':
                 rotation = Std.parseFloat( value );
-            case 'rotationCentreX':
-                rotationCentreX = Std.parseFloat( value );
-            case 'rotationCentreY':
-                rotationCentreY = Std.parseFloat( value );
+            case 'transformCentreX':
+                transformCentreX = Std.parseFloat( value );
+            case 'transformCentreY':
+                transformCentreY = Std.parseFloat( value );
             case 'skewX':
                 skewX = Std.parseFloat( value );
             case 'skewY':
                 skewY = Std.parseFloat( value );
+            case 'scaleX':
+                scaleX = Std.parseFloat( value );
+            case 'scaleY':
+                scaleY = Std.parseFloat( value );
+            case 'scale':
+                scaleX = scaleY = Std.parseFloat( value );
             case 'edgeSoft':
                 edgeSoft = Std.parseFloat( value );   
             case 'externalSoft':
@@ -50,18 +58,23 @@ abstract class GroupShape<DRAWTOOL,IMAGETOOL> implements ShapeInterface<DRAWTOOL
                 trace( 'property not found ' + name );
         }
     }
-    abstract public function setImage( name: String, imageTool: IMAGETOOL ):IMAGETOOL;
     public function translate( x: Float, y: Float ){
         offX = x;
         offY = y;
     }
     abstract public function render( drawTool: DRAWTOOL ): DRAWTOOL;
-    abstract public function clear( drawTool: DRAWTOOL, color: Int ): DRAWTOOL;
+
     public function hit( x: Float, y: Float ): Bool {
         return if( hitObj == null ){
             false;
         } else {
             hitObj.hit( x, y );
         }
+    }
+    public function clear( drawTool: DRAWTOOL, color: Int ): DRAWTOOL {
+        return drawTool;
+    }
+    public function setImage( name: String, imageTool: IMAGETOOL ):IMAGETOOL {
+        return imageTool;
     }
 }

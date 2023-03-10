@@ -4,7 +4,7 @@ import triangleGML.FillForm;
 import triangleGML.ArcType;
 
 @:structInit
-abstract class ArcShape_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL> {
+abstract class ArcForm_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,IMAGETOOL> {
     public var left:       Float;
     public var top:        Float;
     public var width:      Float;

@@ -43,7 +43,9 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
         var name: String = x.nodeName;
         var s = getTriangleGML( name );
         for( att in x.attributes() ){
+            #if triangleGML.attibuteTrace
             trace( att + ' ' + x.get(att) );
+            #end
             if( att.substr( 0, 'image'.length ) == 'image' ){
                 // use image resource
                 s.setImage( att.toLowerCase(), imageResource.get( x.get(att) ) );
