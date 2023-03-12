@@ -71,8 +71,8 @@ abstract class NineSlicePicture_<DRAWTOOL,IMAGETOOL> extends FillForm<DRAWTOOL,I
                         , imageTexture = null
                         , pictureX = 0.
                         , pictureY = 0.
-                        , pictureWidth = 100.
-                        , pictureHeight = 100.
+                        , pictureWidth = 0.
+                        , pictureHeight = 0.
                         , rounded = false
                         ){
         super( opacity, visibility, strokeColor, strokeWidth, strokeDashGapArray, fill );

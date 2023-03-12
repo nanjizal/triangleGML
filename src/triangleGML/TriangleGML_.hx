@@ -14,6 +14,7 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
     public function addImage( name: String, imageTool: IMAGETOOL ): IMAGETOOL {
         var lowerName = name.toLowerCase();
         imageResource.set( lowerName, imageTool );
+        trace(imageResource);
         return imageTool;
     }
 
@@ -26,6 +27,7 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
             process();
         }
     }
+
     public function addShape( str: String, x: Float = 0., y: Float = 0. ): TriangleGML_<DRAWTOOL,IMAGETOOL> {
         xml = Xml.parse( '<node>'+str+'</node>' ).firstElement(); 
         this.offX = x;
@@ -42,25 +44,29 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
     function processShape( x: Xml ){
         var name: String = x.nodeName;
         var s = getTriangleGML( name );
-        for( att in x.attributes() ){
-            #if triangleGML.attibuteTrace
-            trace( att + ' ' + x.get(att) );
-            #end
-            if( att.substr( 0, 'image'.length ) == 'image' ){
-                // use image resource
-                s.setImage( att.toLowerCase(), imageResource.get( x.get(att) ) );
-            } else {
-                s.setParameter( att, x.get( att ) );
-            }
-        }
-        if( offX != 0. || offY != 0. ){
-            s.translate( offX, offY );
-        }
-        s.render( drawTool );
+        for( att in x.attributes() ) processAttribute( att, x.get( att ), s );
+        if( offX != 0. || offY != 0. ) s.translate( offX, offY );
         if( shapes == null ) shapes = [];
         shapes.push( s );
+        #if target.sys
+        // for js need to call render when asset loaded.
+        s.render( drawTool );
+        #end
+        
     }
-
+    // seperate to allow handling of src promises?
+    public function processAttribute( att: String, value: String, shape: ShapeInterface<DRAWTOOL,IMAGETOOL> ){
+        #if triangleGML.attibuteTrace
+        trace( att + ' ' + value );
+        #end
+        if( att.substr( 0, 'image'.length ) == 'image' ){
+            // use image resource
+            shape.setImage( att, imageResource.get( value.toLowerCase() ) );
+        } else {
+            shape.setParameter( att, value );
+        }
+    }
+    function render() for( i in 0...shapes.length ) shapes[i].render( drawTool );
     abstract public function getTriangleGML( nodeName: String ): ShapeInterface<DRAWTOOL,IMAGETOOL>;
 }
 
