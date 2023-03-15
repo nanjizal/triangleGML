@@ -66,7 +66,7 @@ abstract class TriangleGML_<DRAWTOOL,IMAGETOOL> {
             shape.setParameter( att, value );
         }
     }
-    function render() for( i in 0...shapes.length ) shapes[i].render( drawTool );
+    public function render() for( i in 0...shapes.length ) shapes[i].render( drawTool );
     abstract public function getTriangleGML( nodeName: String ): ShapeInterface<DRAWTOOL,IMAGETOOL>;
 }
 
