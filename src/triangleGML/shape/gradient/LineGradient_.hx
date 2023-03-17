@@ -19,6 +19,7 @@ abstract class LineGradient_<DRAWTOOL,IMAGETOOL> extends BasicGradient<DRAWTOOL,
                         , colorC = 0xFF00EAFF
                         , colorD = 0xFF7300FF
                         , strokeWidth = 1.
+                        
                         ){
         super( opacity, visibility, [ colorA, colorB, colorC, colorD ] );
         this.x1 = x1;
